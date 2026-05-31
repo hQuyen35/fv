@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Nhạc nền định dạng m4a của Chị nè -->
     <audio id="bg-music" loop>
-        <source src="assets/music.mp3" type="audio/mpeg">
+        <source src="amthanh.m4a" type="audio/mp4">
     </audio>
 
     <div id="app">
+        <!-- Trang 1 -->
         <section id="page1" class="page active">
             <h1>Nay là ngày mấy? 🤔</h1>
             <div class="btn-group">
@@ -19,6 +21,7 @@
             </div>
         </section>
 
+        <!-- Trang 2 -->
         <section id="page2" class="page">
             <h1>Tôi là... 😶‍🌫️</h1>
             <div class="btn-group">
@@ -27,8 +30,10 @@
             </div>
         </section>
 
+        <!-- Trang 3 -->
         <section id="page3" class="page">
-            <h1 class="wish-text">1/6 vui vẻ nha bạn ơi! Mong bạn luôn bình yên, hạnh phúc và vạn sự như ý nha! 🌻</h1>
+            <!-- Chỗ này Chị tự sửa lại lời chúc theo ý mình nhaaa -->
+            <h1 class="wish-text">Chúc Chị ngày 1/6 tràn ngập niềm vui, luôn dễ thương và bùng nổ nhan sắc nha! 💖🎉</h1>
             <div class="btn-group">
                 <button onclick="nextPage(4)">Tiếp tục</button>
                 <button onclick="showPle()">Hết</button>
@@ -36,14 +41,17 @@
             <p id="ple-text" class="hidden">plè 😛</p>
         </section>
 
+        <!-- Trang 4: Show trọn bộ 6 tấm ảnh của Chị luôn -->
         <section id="page4" class="page">
             <h1>My Gallery ✨</h1>
             <div class="gallery">
-                <img src="assets/img1.jpg" alt="Me">
-                <img src="assets/img2.jpg" alt="Me">
-                <img src="assets/img3.jpg" alt="Me">
-                <img src="assets/img4.jpg" alt="Me">
-                <img src="assets/img5.jpg" alt="Me">
+                <img src="anh1.jpg" alt="Me">
+                <img src="anh2.jpg" alt="Me">
+                <img src="anh2cm16.jpg" alt="Me">
+                <img src="anh3.jpg" alt="Me">
+                <img src="anh4.jpg" alt="Me">
+                <img src="anh5.jpg" alt="Me">
+                <img src="anh6.jpg" alt="Me">
             </div>
         </section>
     </div>
