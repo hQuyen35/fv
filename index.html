@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Surprise nè!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="app">
+        <section id="page1" class="page active">
+            <h1>Nay là ngày mấy? 🤔</h1>
+            <div class="btn-group">
+                <button onclick="nextPage(2)">1/6</button>
+                <button onclick="nextPage(2)">Quốc tế thiếu nhi</button>
+            </div>
+        </section>
+
+        <section id="page2" class="page">
+            <h1>Tôi là... 😶‍🌫️</h1>
+            <div class="btn-group">
+                <button onclick="nextPage(3)">Chó 🐶</button>
+                <button onclick="nextPage(3)">Tôm 🦐</button>
+            </div>
+        </section>
+
+        <section id="page3" class="page">
+            <h1 class="wish-text">1/6 vui vẻ nha bạn ơi! Mong bạn luôn bình yên, hạnh phúc và vạn sự như ý nha! 🌻</h1>
+            <div class="btn-group">
+                <button onclick="nextPage(4)">Tiếp tục</button>
+                <button onclick="showPle()">Hết</button>
+            </div>
+            <p id="ple-text" class="hidden">plè 😛</p>
+        </section>
+
+        <section id="page4" class="page">
+            <h1>My Gallery ✨</h1>
+            <div class="gallery">
+                <img src="assets/img1.jpg" alt="Me">
+                <img src="assets/img2.jpg" alt="Me">
+                <img src="assets/img3.jpg" alt="Me">
+                <img src="assets/img4.jpg" alt="Me">
+                <img src="assets/img5.jpg" alt="Me">
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
