@@ -6,13 +6,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Sửa lại tên file viết thường chính xác để bật được nhạc nè Chị -->
     <audio id="bg-music" loop>
         <source src="amthanh.m4a" type="audio/mp4">
     </audio>
 
     <div id="app">
-        <!-- Trang 1 -->
         <section id="page1" class="page active">
             <h1>Nay là ngày mấy? 🤔</h1>
             <div class="btn-group">
@@ -21,7 +19,6 @@
             </div>
         </section>
 
-        <!-- Trang 2 -->
         <section id="page2" class="page">
             <h1>Tôi là... 😶‍🌫️</h1>
             <div class="btn-group">
@@ -30,9 +27,8 @@
             </div>
         </section>
 
-        <!-- Trang 3 -->
         <section id="page3" class="page">
-            <h1 class="wish-text">Chúc bạn 1/6 vui vẻ, luôn cười thật nhiều và gặp thật nhiều điều may mắn nha!</h1>
+            <h1 class="wish-text">Chúc bạn 1/6 vui vẻ, luôn cười thật nhiều và gặp thật nhiều điều may mắn nha! 💖🎉</h1>
             <div class="btn-group">
                 <button onclick="nextPage(4)">Tiếp tục</button>
                 <button onclick="showPle()">Hết</button>
@@ -40,17 +36,45 @@
             <p id="ple-text" class="hidden">plè 😛</p>
         </section>
 
-        <!-- Đã bỏ chữ assets/ để hiện trọn bộ 6 tấm ảnh xịn xò của Chị -->
         <section id="page4" class="page">
             <h1>My Gallery ✨</h1>
             <div class="gallery">
-                <img src="anh1.jpg" alt="Me">
-                <img src="anh2.jpg" alt="Me">
-                <img src="anh2cm16.jpg" alt="Me">
-                <img src="anh3.jpg" alt="Me">
-                <img src="anh4.jpg" alt="Me">
-                <img src="anh5.jpg" alt="Me">
-                <img src="anh6.jpg" alt="Me">
+                
+                <div class="gallery-item">
+                    <img src="anh1.jpg" alt="Me">
+                    <a href="anh1.jpg" download="anh1.jpg" class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="anh2.jpg" alt="Me">
+                    <a href="anh2.jpg" download="anh2.jpg" class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="anh2cm16.jpg" alt="Me">
+                    <a href="anh2cm16.jpg" download="anh2cm16.jpg" class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="anh3.jpg" alt="Me">
+                    <a href="anh3.jpg" download="anh3.jpg" class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="anh4.jpg" alt="Me">
+                    <a href="anh4.jpg" download="anh4.jpg" class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="anh5.jpg" alt="Me">
+                    <a href="anh5.jpg" download="anh5.jpg" class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="anh6.jpg" alt="Me">
+                    <a href="anh6.jpg" download="anh6.jpg" class="download-btn">Tải về 📥</a>
+                </div>
+
             </div>
         </section>
     </div>
