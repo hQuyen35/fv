@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Surprise nè!</title>
-    <!-- Bé nhét thẳng CSS vào đây để Cốc Cốc không chặn được nữa nè -->
     <style>
         body {
             background: linear-gradient(135deg, #fceaf1 0%, #e8f5ff 100%);
@@ -45,21 +44,55 @@
             background-color: #ff6b8d;
         }
 
+        /* Khung chứa danh sách ảnh */
         .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            max-width: 800px;
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Khung nhỏ bao bọc từng cái ảnh và nút bấm đi kèm */
+        .img-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 12px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            animation: bounce 2s infinite ease-in-out;
         }
 
         .gallery img {
             width: 180px;
             height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        /* Nút tải xuống dưới mỗi ảnh */
+        .download-btn {
+            margin-top: 10px;
+            padding: 8px 15px;
+            font-size: 14px;
+            border: none;
             border-radius: 15px;
-            border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            animation: bounce 2s infinite ease-in-out;
+            background-color: #4ed1a1;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 3px 10px rgba(78, 209, 161, 0.3);
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            background-color: #3cb88f;
         }
 
         @keyframes fadeIn { 
@@ -69,7 +102,7 @@
 
         @keyframes bounce { 
             0%, 100% { transform: translateY(0); } 
-            50% { transform: translateY(-10px); } 
+            50% { transform: translateY(-8px); } 
         }
 
         .hidden { display: none; }
@@ -87,7 +120,6 @@
     </audio>
 
     <div id="app">
-        <!-- Trang 1 -->
         <section id="page1" class="page active">
             <h1>Nay là ngày mấy? 🤔</h1>
             <div class="btn-group">
@@ -96,7 +128,6 @@
             </div>
         </section>
 
-        <!-- Trang 2 -->
         <section id="page2" class="page">
             <h1>Tôi là... 😶‍🌫️</h1>
             <div class="btn-group">
@@ -105,9 +136,8 @@
             </div>
         </section>
 
-        <!-- Trang 3 -->
         <section id="page3" class="page">
-            <h1 class="wish-text">Chúc bạn 1/6 vui vẻ, luôn cười thật nhiều và gặp thật nhiều điều may mắn nha!💖🎉</h1>
+            <h1 class="wish-text">Chúc Chị ngày 1/6 tràn ngập niềm vui, luôn dễ thương và bùng nổ nhan sắc nha! 💖🎉</h1>
             <div class="btn-group">
                 <button onclick="nextPage(4)">Tiếp tục</button>
                 <button onclick="showPle()">Hết</button>
@@ -115,17 +145,90 @@
             <p id="ple-text" class="hidden">plè 😛</p>
         </section>
 
-        <!-- Trang 4 -->
         <section id="page4" class="page">
             <h1>My Gallery ✨</h1>
             <div class="gallery">
-                <img src="anh1.jpg" alt="Me">
-                <img src="anh2.jpg" alt="Me">
-                <img src="anh2cm16.jpg" alt="Me">
-                <img src="anh3.jpg" alt="Me">
-                <img src="anh4.jpg" alt="Me">
-                <img src="anh5.jpg" alt="Me">
-                <img src="anh6.jpg" alt="Me">
+                
+                <div class="img-card">
+                    <img src="anh1.jpg" alt="Me">
+                    <a href="anh1.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="anh2.jpg" alt="Me">
+                    <a href="anh2.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="anh2cm16.jpg" alt="Me">
+                    <a href="anh2cm16.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="anh3.jpg" alt="Me">
+                    <a href="anh3.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="anh4.jpg" alt="Me">
+                    <a href="anh4.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="anh5.jpg" alt="Me">
+                    <a href="anh5.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="anh6.jpg" alt="Me">
+                    <a href="anh6.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="0cbe372f651cd30315c94d063c4e41f2.jpg" alt="Me">
+                    <a href="0cbe372f651cd30315c94d063c4e41f2.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="0eb14c70cbbd138b80359b6f25a0d125.jpg" alt="Me">
+                    <a href="0eb14c70cbbd138b80359b6f25a0d125.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="10c1cce3d2cd1b3c9db721878a410b39.jpg" alt="Me">
+                    <a href="10c1cce3d2cd1b3c9db721878a410b39.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="1a0138b0d5c79c8ea7c96ffe1d48ea1c.jpg" alt="Me">
+                    <a href="1a0138b0d5c79c8ea7c96ffe1d48ea1c.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="1aeb8df349ee3e826e13e79b0eeef44a.jpg" alt="Me">
+                    <a href="1aeb8df349ee3e826e13e79b0eeef44a.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="2ca725369ff493da3373daed7f27323e.jpg" alt="Me">
+                    <a href="2ca725369ff493da3373daed7f27323e.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="4c54b2bd57cd0c8daa7528ef8f888792_1.jpg" alt="Me">
+                    <a href="4c54b2bd57cd0c8daa7528ef8f888792_1.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="5d7e0912ea0d946cf013b0e6a28e02a1.jpg" alt="Me">
+                    <a href="5d7e0912ea0d946cf013b0e6a28e02a1.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
+                <div class="img-card">
+                    <img src="997396b70a436056027f1320f3d57c45.jpg" alt="Me">
+                    <a href="997396b70a436056027f1320f3d57c45.jpg" download class="download-btn">Tải về 📥</a>
+                </div>
+
             </div>
         </section>
     </div>
