@@ -6,11 +6,17 @@ function nextPage(pageNumber) {
     // Hiện trang được chọn
     document.getElementById('page' + pageNumber).classList.add('active');
 
-    // Chơi nhạc khi bấm vào trang đầu tiên (trình duyệt chặn tự động phát nhạc)
+    // Chơi nhạc khi bấm vào nút bất kỳ ở trang đầu tiên
     const music = document.getElementById('bg-music');
-    music.play();
+    if (music) {
+        music.play().catch(error => console.log("Trình duyệt chặn tự động phát nhạc:", error));
+    }
 }
 
+// Thêm hàm này để khi bấm nút "Hết" là nó hiện chữ plè trêu bạn bè nè!
 function showPle() {
-    document.getElementById('ple-text').classList.remove('hidden');
+    const ple = document.getElementById('ple-text');
+    if (ple) {
+        ple.classList.remove('hidden');
+    }
 }
