@@ -1,80 +1,43 @@
-/* Tổng thể căn giữa màn hình cho đẹp nè Chị */
 body {
     background: linear-gradient(135deg, #fceaf1 0%, #e8f5ff 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
+    height: 100vh;
+    overflow: hidden;
     font-family: 'Arial', sans-serif;
-    color: #4a4a4a;
 }
 
-/* Đây là chìa khóa nè: Mặc định là ẩn hết các trang đi */
 .page {
-    display: none; 
+    display: none; /* Ẩn các trang khác */
     text-align: center;
     animation: fadeIn 0.8s ease-in-out;
-    padding: 20px;
 }
 
-/* Chỉ trang nào có thêm chữ "active" mới được hiện lên */
-.active { 
-    display: block !important; 
-} 
+.active { display: block; } /* Chỉ hiện trang đang chọn */
 
-/* Trang trí nút bấm cho Gen Z xíu nè */
 .btn-group button {
     padding: 15px 30px;
     margin: 10px;
     font-size: 18px;
     border: none;
-    border-radius: 25px;
+    border-radius: 20px;
     background-color: #ff85a2;
     color: white;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 133, 162, 0.3);
-    transition: all 0.3s ease;
+    transition: transform 0.2s;
 }
 
-.btn-group button:hover { 
-    transform: scale(1.1) translateY(-3px);
-    background-color: #ff6b8d;
-}
-
-/* Làm cho ảnh nhảy nhảy cho vui mắt */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
+.btn-group button:hover { transform: scale(1.1); }
 
 .gallery img {
-    width: 180px;
-    height: auto;
-    border-radius: 15px;
-    border: 5px solid white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    animation: bounce 2s infinite ease-in-out;
+    width: 150px;
+    margin: 5px;
+    border-radius: 10px;
+    animation: bounce 2s infinite;
 }
 
-/* Mấy cái hiệu ứng hoạt ảnh Chị thích nè */
-@keyframes fadeIn { 
-    from { opacity: 0; transform: translateY(20px); } 
-    to { opacity: 1; transform: translateY(0); } 
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-@keyframes bounce { 
-    0%, 100% { transform: translateY(0); } 
-    50% { transform: translateY(-10px); } 
-}
-
-/* Chữ "plè" trêu chọc */
-.hidden { display: none; }
-#ple-text {
-    color: #ff4757;
-    font-size: 60px;
-    font-weight: bold;
-    margin-top: 20px;
-}
+.hidden { display: none; color: red; font-size: 50px; font-weight: bold; }
