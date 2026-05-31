@@ -1,43 +1,28 @@
-body {
-    background: linear-gradient(135deg, #fceaf1 0%, #e8f5ff 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    font-family: 'Arial', sans-serif;
-}
-
-.page {
-    display: none; /* Ẩn các trang khác */
+/* Định dạng cho từng cụm ảnh và nút */
+.gallery-item {
+    display: inline-block;
+    margin: 15px;
     text-align: center;
-    animation: fadeIn 0.8s ease-in-out;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.active { display: block; } /* Chỉ hiện trang đang chọn */
-
-.btn-group button {
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 18px;
-    border: none;
-    border-radius: 20px;
-    background-color: #ff85a2;
+/* Thêm hiệu ứng cho nút tải về */
+.download-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #4caf50;
     color: white;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.btn-group button:hover { transform: scale(1.1); }
-
-.gallery img {
-    width: 150px;
-    margin: 5px;
+    text-decoration: none;
     border-radius: 10px;
-    animation: bounce 2s infinite;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
 }
 
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-
-.hidden { display: none; color: red; font-size: 50px; font-weight: bold; }
+.download-btn:hover {
+    background-color: #45a049;
+}
