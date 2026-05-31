@@ -3,7 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Surprise nè!</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bé nhét thẳng CSS vào đây để Cốc Cốc không chặn được nữa nè -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #fceaf1 0%, #e8f5ff 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #4a4a4a;
+        }
+
+        .page {
+            display: none; 
+            text-align: center;
+            animation: fadeIn 0.8s ease-in-out;
+            padding: 20px;
+        }
+
+        .active { 
+            display: block !important; 
+        } 
+
+        .btn-group button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            background-color: #ff85a2;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 133, 162, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-group button:hover { 
+            transform: scale(1.1) translateY(-3px);
+            background-color: #ff6b8d;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 800px;
+        }
+
+        .gallery img {
+            width: 180px;
+            height: auto;
+            border-radius: 15px;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(20px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        @keyframes bounce { 
+            0%, 100% { transform: translateY(0); } 
+            50% { transform: translateY(-10px); } 
+        }
+
+        .hidden { display: none; }
+        #ple-text {
+            color: #ff4757;
+            font-size: 60px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <audio id="bg-music" loop>
@@ -11,6 +87,7 @@
     </audio>
 
     <div id="app">
+        <!-- Trang 1 -->
         <section id="page1" class="page active">
             <h1>Nay là ngày mấy? 🤔</h1>
             <div class="btn-group">
@@ -19,6 +96,7 @@
             </div>
         </section>
 
+        <!-- Trang 2 -->
         <section id="page2" class="page">
             <h1>Tôi là... 😶‍🌫️</h1>
             <div class="btn-group">
@@ -27,8 +105,9 @@
             </div>
         </section>
 
+        <!-- Trang 3 -->
         <section id="page3" class="page">
-            <h1 class="wish-text">Chúc bạn 1/6 vui vẻ, luôn cười thật nhiều và gặp thật nhiều điều may mắn nha! 💖🎉</h1>
+            <h1 class="wish-text">Chúc Chị ngày 1/6 tràn ngập niềm vui, luôn dễ thương và bùng nổ nhan sắc nha! 💖🎉</h1>
             <div class="btn-group">
                 <button onclick="nextPage(4)">Tiếp tục</button>
                 <button onclick="showPle()">Hết</button>
@@ -36,45 +115,17 @@
             <p id="ple-text" class="hidden">plè 😛</p>
         </section>
 
+        <!-- Trang 4 -->
         <section id="page4" class="page">
             <h1>My Gallery ✨</h1>
             <div class="gallery">
-                
-                <div class="gallery-item">
-                    <img src="anh1.jpg" alt="Me">
-                    <a href="anh1.jpg" download="anh1.jpg" class="download-btn">Tải về 📥</a>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="anh2.jpg" alt="Me">
-                    <a href="anh2.jpg" download="anh2.jpg" class="download-btn">Tải về 📥</a>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="anh2cm16.jpg" alt="Me">
-                    <a href="anh2cm16.jpg" download="anh2cm16.jpg" class="download-btn">Tải về 📥</a>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="anh3.jpg" alt="Me">
-                    <a href="anh3.jpg" download="anh3.jpg" class="download-btn">Tải về 📥</a>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="anh4.jpg" alt="Me">
-                    <a href="anh4.jpg" download="anh4.jpg" class="download-btn">Tải về 📥</a>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="anh5.jpg" alt="Me">
-                    <a href="anh5.jpg" download="anh5.jpg" class="download-btn">Tải về 📥</a>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="anh6.jpg" alt="Me">
-                    <a href="anh6.jpg" download="anh6.jpg" class="download-btn">Tải về 📥</a>
-                </div>
-
+                <img src="anh1.jpg" alt="Me">
+                <img src="anh2.jpg" alt="Me">
+                <img src="anh2cm16.jpg" alt="Me">
+                <img src="anh3.jpg" alt="Me">
+                <img src="anh4.jpg" alt="Me">
+                <img src="anh5.jpg" alt="Me">
+                <img src="anh6.jpg" alt="Me">
             </div>
         </section>
     </div>
